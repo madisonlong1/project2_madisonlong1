@@ -23,7 +23,7 @@ function App() {
         <AuthProvider>
           <ChatServiceProvider>
             <ChatProvider>
-              <Router>
+              <Router basename={import.meta.env.BASE_URL}>
                 <Routes>
                   <Route path="/" element={<Navigate to="/auth" replace />} />
                   <Route path="/auth" element={<AuthPage />} />
