@@ -16,9 +16,11 @@ interface WebSocketUpdateServiceConfig {
  * This will be fully implemented in a future step
  */
 export class WebSocketUpdateService implements UpdateService {
+  // @ts-expect-error - config stored for future implementation
   private config: WebSocketUpdateServiceConfig;
   private isRunningFlag: boolean = false;
   private websocket: WebSocket | null = null;
+  // @ts-expect-error - reconnectAttempts stored for future implementation
   private reconnectAttempts: number = 0;
   private conversationCallbacks: Set<(conversation: Conversation) => void> =
     new Set();

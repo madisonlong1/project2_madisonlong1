@@ -136,15 +136,15 @@ export class ApiChatService implements ChatService {
 
 
   async updateConversation(
-    id: string,
-    request: UpdateConversationRequest
+    _id: string,
+    _request: UpdateConversationRequest
   ): Promise<Conversation> {
     // SKIP, not currently used by application
 
     throw new Error('updateConversation method not implemented');
   }
 
-  async deleteConversation(id: string): Promise<void> {
+  async deleteConversation(_id: string): Promise<void> {
     // SKIP, not currently used by application
 
     throw new Error('deleteConversation method not implemented');
@@ -186,7 +186,7 @@ export class ApiChatService implements ChatService {
     return response;
   }
 
-  async markMessageAsRead(messageId: string): Promise<void> {
+  async markMessageAsRead(_messageId: string): Promise<void> {
     // SKIP, not currently used by application
 
     throw new Error('markMessageAsRead method not implemented');

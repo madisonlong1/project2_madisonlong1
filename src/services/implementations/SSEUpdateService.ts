@@ -15,6 +15,7 @@ interface SSEUpdateServiceConfig {
  * This will be fully implemented in a future step
  */
 export class SSEUpdateService implements UpdateService {
+  // @ts-expect-error - config stored for future implementation
   private config: SSEUpdateServiceConfig;
   private isRunningFlag: boolean = false;
   private eventSource: EventSource | null = null;

@@ -43,7 +43,7 @@ export default function AuthPage() {
       onLogin={handleLogin}
       onRegister={handleRegister}
       isLoading={isLoading}
-      error={error}
+      error={error || undefined}
       successMessage={successMessage}
     />
   );
