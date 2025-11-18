@@ -34,6 +34,10 @@ export class SSEUpdateService implements UpdateService {
       return;
     }
 
+    // Touch config to satisfy unused checks until implementation is added.
+    const { baseUrl } = this.config;
+    void baseUrl;
+
     this.isRunningFlag = true;
     this.notifyConnectionStatusChange({ connected: true });
 

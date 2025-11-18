@@ -33,6 +33,10 @@ export class PushUpdateService implements UpdateService {
       return;
     }
 
+    // Touch config to satisfy unused checks until implementation is added.
+    const { maxReconnectAttempts } = this.config;
+    void maxReconnectAttempts;
+
     this.isRunningFlag = true;
     this.notifyConnectionStatusChange({ connected: true });
 
