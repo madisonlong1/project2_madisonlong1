@@ -31,7 +31,7 @@ interface PollingState {
 export class ApiPollingUpdateService implements UpdateService {
   private config: PollingUpdateServiceConfig;
   private isRunningFlag: boolean = false;
-  private intervalId: number | null = null;
+  private intervalId: ReturnType<typeof setInterval> | null = null;
   private tokenManager: TokenManager;
   private conversationCallbacks: Set<(conversation: Conversation) => void> =
     new Set();
